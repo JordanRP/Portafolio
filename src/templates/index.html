@@ -1,10 +1,6 @@
-{%extends "layout.html" %}
-
-{%block tittle%} Portafolio {%endblock tittle%}
-
-{%block descripcion%} Analista Programador, Web Developer {%endblock descripcion%} 
-
-{%block conocimientos %}
+{%extends "layout.html" %} {%block tittle%} Portafolio {%endblock tittle%}
+{%block descripcion%} Analista Programador, Web Developer {%endblock
+descripcion%} {%block conocimientos %}
 <div class="col-lg-4 ms-auto">
   <p class="lead">
     Freelancer is a free bootstrap theme created by Start Bootstrap. The
@@ -20,3 +16,34 @@
   </p>
 </div>
 {%endblock conocimientos%}
+
+{%block items%}
+<!-- Portfolio Item 1-->
+<div class="col-md-6 col-lg-4 mb-5">
+  <div
+    class="portfolio-item mx-auto"
+    data-bs-toggle="modal"
+    data-bs-target="#portfolioModal1"
+  >
+    <div
+      class="
+        portfolio-item-caption
+        d-flex
+        align-items-center
+        justify-content-center
+        h-100
+        w-100
+      "
+    >
+      <div class="portfolio-item-caption-content text-center text-white">
+        <i class="fas fa-plus fa-3x"></i>
+      </div>
+    </div>
+    <img
+      class="img-fluid"
+      src="{{url_for('static', filename='assets/img/portfolio/cabin.png')}}"
+      alt="..."
+    />
+  </div>
+</div>
+{%endblock items%}
